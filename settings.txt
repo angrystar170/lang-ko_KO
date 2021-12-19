@@ -4,7 +4,7 @@
 24 hours=24시간제
 8023ad=802.3ad
 Activate=활성화
-Activated=활성화 됨
+Activated=활성화됨
 Activating=활성화 중
 Active Directory Settings=Active Directory 설정
 Active Directory=Active Directory
@@ -129,8 +129,8 @@ Data received=데이터 수신됨
 Data sent=데이터 송신됨
 Date and Time=날짜 및 시간
 Date format=날짜 형식
-Day of the month=요일
-Day of the week=주간
+Day of the month=일(월내)
+Day of the week=요일
 Day, D Month YYYY=
 Day, DD.MM.YYYY=
 Day, DD-MM-YYYY=
@@ -712,3 +712,8 @@ Your Unraid Server is reachable from the internet=Unraid 서버는 인터넷에�
 YYYY-MM-DD=
 
 ; Note: November 16, 2021 - 36 missing translations
+
+; New entries (3) - 2021-12-16
+Accumulation duration=
+Accumulation frequency=
+Cumulative parity check=
