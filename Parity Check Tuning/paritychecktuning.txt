@@ -24,7 +24,7 @@ No parity check entries found in syslog=syslog에 패리티 검사 항목이 없
 ParityRead-Check History=Parity/Read-Check History=패리티/읽기 검사 기록
 Parity Check=패리티 확인
 Parity Check Tuning logging=패리티 확인 동조 로그 남기기
-Parity Sync=패리티 싱크
+Parity Sync=패리티 동기화
 Pause an array operation at=어레이 작업 일시 중지
 Pause and Resume array operations if disks overheat=디스크 과열 시 어레이 작업 일시 중지 및 재개
 Read Check=읽기 검사
@@ -65,8 +65,8 @@ This can be much faster than having to run a full parity check or read check to 
 :end
 ; fields
 Click to show Error Sectors from syslog=syslog의 오류 섹터를 표시하려면 클릭하십시오.
-End point for check=
-Method used to specify start and stop points=
+End point for check=확인 종료 지점
+Method used to specify start and stop points=시작 및 중지 지점을 지정하는 데 사용되는 방법
 Only read checks can be performed=읽기 검사만 수행할 수 있습니다.
 percent=퍼센트
 Percentage=퍼센테이지
@@ -79,58 +79,58 @@ Write Corrections to Parity=패리티에 수정 사항 쓰기
 
 ; PHP file messages
 
-Analyze results from an array operation=
-Array being shutdown due to drive overheating=
-Array operation will not be restarted=
-Array operation restarted=
-Array shutdown=
-Cancel a running parity check=
-Correcting=
-Detected a change to the disk configuration=
-Drives cooled down=
-Elapsed Time=
-ERROR=
-Following drives overheated=
-IMPORTANT=
-Increments=
-Non-Correcting=
-Pause a running array operation=
-Resume a paused array operation=
-Sent notification=
-Show the status of a running parity check=
-Shutdown=
-Start a correcting parity check=
-Start a correcting parity check=
-Start a parity check with scheduled settings=
-Starting Shutdown=
-Unclean shutdown detected=
-Unknown action=
-Unrecognized option=
-Usage=
-where action is one of=
+Analyze results from an array operation=어레이 작업의 결과 분석
+Array being shutdown due to drive overheating=드라이브 과열로 인해 어레이가 종료됨
+Array operation will not be restarted=어레이 작업이 다시 시작되지 않음
+Array operation restarted=어레이 작업 재시작됨
+Array shutdown=어레이 종료
+Cancel a running parity check=실행 중인 패리티 검사 중지
+Correcting=교정 중
+Detected a change to the disk configuration=디스크 구성 변경을 감지함
+Drives cooled down=드라이브가 냉각됨
+Elapsed Time=경과 시간
+ERROR=오류
+Following drives overheated=다음 드라이브가 과열 상태임
+IMPORTANT=중요사항
+Increments=증분
+Non-Correcting=교정되지 않음
+Pause a running array operation=실행 중인 어레이 작업 일시 중지
+Resume a paused array operation=일시 중지된 어레이 작업 재개
+Sent notification=알림 전송
+Show the status of a running parity check=실행 중인 패리티 검사의 상태 표시
+Shutdown=시스템 종료
+Start a correcting parity check=교정된 패리티 검사 시작
+Start a correcting parity check=교정된 패리티 검사 시작
+Start a parity check with scheduled settings=예약된 설정으로 패리티 검사 시작
+Starting Shutdown=시스템 종료 시작 중
+Unclean shutdown detected=부정한 시스템 종료가 감지됨
+Unknown action=알 수 없는 동작
+Unrecognized option=인식되지 않은 옵션
+Usage=사용법
+where action is one of=여기서 행동은 다음 중 하나입니다:
 
 ; Notifications
 
-aborted due to Unclean shutdown=
-array stopping so progress will be lost=
+aborted due to Unclean shutdown=부정한 종료로 인해 중단됨
+array stopping so progress will be lost=어레이가 중지되어 진행 상황이 손실됩니다
 ; The type of array operation (parity check, clear, rebuild) will be appended to the following text
-Automatic unRaid=
-Average Speed=
-completed=
-Correcting Parity Check=
-Drives cooled down=
-errors=
-finished=
-Increments=
-NonCorrecting Parity Check=Non-Correcting Parity Check
-Pause=
-Paused=
-Resume=
-Resumed=
-Runtime=
-Scheduled pause=
-Unclean shutdown detected=
-will be started=
+Automatic unRaid=자동 unRaid
+Average Speed=평균 속도
+completed=완료
+Correcting Parity Check=교정된 패리티 검사
+Drives cooled down=드라이브가 냉각됨
+errors=오류
+finished=마침
+Increments=증분
+NonCorrecting Parity Check=미교정된 패리티 검사
+Pause=일시 중지
+Paused=일시 중지됨
+Resume=재개
+Resumed=재개됨
+Runtime=런타임
+Scheduled pause=예약된 일시 중지
+Unclean shutdown detected=부정한 시스템 종료가 감지됨
+will be started=시작될 예정
 
 ; Swal warnings
 
@@ -166,7 +166,7 @@ Unusually large value=
 
 ; Syslog messages (with debug logging disabled)
 
-%s Cancelled=
+%s Cancelled=%s 취소됨
 Array not started so no action taken=
 as drives now cooled down=
 Following drives overheated=
@@ -181,19 +181,19 @@ already running=어레이 실행 중
 array drives=어레이 장치
 Array operation paused but drives not cooled enough to resume=
 Array operation paused but not for temperature related reason=
-Array stopping=
+Array stopping=어레이 정지 중
 Array stopping while %s was in progress %s=
 but no action currently taken on started event=
 but no parity check was in progress when array stopped=
 Cancel request=
-cool=
+cool=시원함
 created cron entries for running increments=
 created cron entry for monitoring disk temperatures=
 Detected that array has not yet been started=
 Detected that array has just been started=
 detected that mdcmd had been called from %s with command %s=
-ERROR=
-hot=
+ERROR=오류
+hot=뜨거움
 Loading progress file %s=
 No action specified=
 No array operation currently in progress=
@@ -405,4 +405,4 @@ Method used to specify start and stop points=
 > sector is displayed and whether the it was being corrected or is a parity error.
 :end
 
-; Note: December 16, 2021 - 127 missing translations
+; Note: June 6, 2022 - 82 missing translations
